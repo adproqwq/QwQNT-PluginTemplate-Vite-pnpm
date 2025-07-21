@@ -9,7 +9,7 @@ jobs:
 
     permissions:
       contents: write
-    
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -25,11 +25,11 @@ jobs:
         run: |
           pnpm install
           pnpm build
-          
+
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: LLTemplate-Vite.zip
+          files: qwqnttemplate-vite-pnpm.zip
           body_path: ./changeLog.md
