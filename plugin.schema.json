@@ -12,24 +12,10 @@
           "type": "object",
           "description": "QwQNT Framework specific fields.",
           "properties": {
-            "name": {
-              "type": "string",
-              "description": "Display name of the plugin."
-            },
-            "icon": {
-              "type": [
-                "string",
-                "null"
-              ],
-              "description": "Icon path of the plugin."
-            },
-            "entry": {
+            "inject": {
               "type": "object",
               "description": "Entry points of the plugin.",
               "properties": {
-                "main": {
-                  "type": "string"
-                },
                 "preload": {
                   "type": "string"
                 },

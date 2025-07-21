@@ -1,5 +1,5 @@
 import { BrowserWindow } from 'electron';
-import { C as CoreExports, F as FrameworkExports } from './exports-BbSQDSNy.js';
+import { C as CoreExports, F as FrameworkExports } from './exports-BkhRGJT8.js';
 
 type TransformerSignal = typeof HookTransformer.DO_NOTHING | typeof HookTransformer.CONSUMED;
 declare class HookTransformer<T> extends Array<(value: T) => T | TransformerSignal | [TransformerSignal, T]> {

@@ -29,7 +29,6 @@ interface FrameworkExports {
         data: string;
         logs: string;
         plugins: string;
-        scripts: string;
         stylesheets: string;
     };
     plugins: Plugin[];
