@@ -1,29 +1,40 @@
 {
-  "name": "lltemplate-vite-pnpm",
+  "$schema": "./plugin.schema.json",
+  "name": "qwqnttemplate-vite-pnpm",
   "version": "1.0.0",
-  "description": "A plugin template for LiteLoaderQQNT, powered by Vite & Typescript",
-  "main": "index.js",
+  "description": "A plugin template for QwQNT, powered by Vite & Typescript",
+  "type": "module",
+  "main": "./main/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "npx eslint --fix src/**/* --ext .js,.ts",
-    "build": "npx electron-vite build"
+    "lint": "eslint --fix src/**/* --ext .js,.ts",
+    "build": "electron-vite build"
   },
   "author": "Adpro",
-  "license": "GPL-3.0-only",
+  "license": "MIT",
   "devDependencies": {
-    "@electron-toolkit/eslint-config-ts": "^2.0.0",
+    "@electron-toolkit/eslint-config-ts": "^3.1.0",
     "@electron-toolkit/tsconfig": "^1.0.1",
-    "@types/eslint__eslintrc": "^2.1.2",
-    "@types/eslint__js": "^8.42.3",
-    "@typescript-eslint/eslint-plugin": "8.0.0",
-    "@typescript-eslint/parser": "8.0.0",
-    "electron": "^31.3.1",
-    "electron-vite": "^2.3.0",
-    "eslint": "^9.8.0",
-    "unplugin-zip-pack": "^1.0.2",
-    "vite": "^5.3.5",
-    "vite-plugin-checker": "^0.7.2",
-    "vite-plugin-cp": "^4.0.8"
+    "@eslint/js": "^9.31.0",
+    "@types/node": "^24.0.15",
+    "@typescript-eslint/eslint-plugin": "^8.37.0",
+    "@typescript-eslint/parser": "^8.37.0",
+    "electron": "^37.2.3",
+    "electron-vite": "^4.0.0",
+    "eslint": "^9.31.0",
+    "jiti": "^2.4.2",
+    "typescript-eslint": "^8.37.0",
+    "unplugin-zip-pack": "^1.0.3",
+    "vite": "^7.0.5",
+    "vite-plugin-checker": "^0.10.0",
+    "vite-plugin-cp": "^6.0.3"
   },
-  "packageManager": "pnpm@9.4.0"
+  "packageManager": "pnpm@10.13.1",
+  "qwqnt": {
+    "name": "QwQNT 插件模板",
+    "entry": {
+      "preload": "./preload/index.mjs",
+      "renderer": "./renderer/index.js"
+    }
+  }
 }

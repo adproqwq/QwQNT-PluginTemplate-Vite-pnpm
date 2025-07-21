@@ -1,6 +1,6 @@
-# LiteLoaderQQNT Plugin Template
+# QwQNT Plugin Template
 
-本仓库为民间自制的 [LiteLoaderQQNT](https://github.com/LiteLoaderQQNT/LiteLoaderQQNT) 插件模板。
+本仓库为民间自制的 QwQNT 插件模板。
 
 ## 如果你想...
 
@@ -16,8 +16,8 @@
 
 1. 点击本仓库页面右上角的 `Use this template`，然后选择 `Create a new repository`
 2. 在接下来的页面中填写你的仓库信息后，点击 `Create repository`
-3. 将创建的仓库克隆至本地，然后编辑 [`manifest.json`](manifest.json) （[文档](https://liteloaderqqnt.github.io/docs/introduction.html#%E6%89%8B%E5%8A%A8%E5%88%9B%E5%BB%BA)）
-4. （可选）编辑 [TypeScript 配置文件](tsconfig.json)、[Vite 配置文件](electron.vite.config.ts) 和 [ESLint 配置文件](.eslintrc.js)，让项目配置风格更符合你的口味
+3. 将创建的仓库克隆至本地，然后编辑 [`package.json`](package.json)
+4. （可选）编辑 [TypeScript 配置文件](tsconfig.json)、[Vite 配置文件](electron.vite.config.ts) 和 [ESLint 配置文件](eslint.config.ts)，让项目配置风格更符合你的口味
 5. 运行 `pnpm install` 安装依赖包，你也可以随意安装其他需要的依赖包
 6. 开始编写代码
 7. 执行 `pnpm lint` 检查代码
@@ -35,24 +35,31 @@
 ## 鸣谢
 * [Vite](https://vitejs.dev/)
 * [electron-vite](https://electron-vite.org/)
-* [LiteLoaderQQNT](https://github.com/LiteLoaderQQNT/LiteLoaderQQNT/)
 * [LLOneBot](https://github.com/LLOneBot/LLOneBot)
+* QwQNT
 
 ## License
 ```
-    LiteLoaderQQNT-PluginTemplate-Vite-pnpm
-    Copyright (C) 2024  MisaLiu, Adpro
+    MIT License
 
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
+    QwQNT-PluginTemplate-Vite-pnpm
+    Copyright (C) 2025  Adpro
 
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
 
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
 ```

@@ -4,7 +4,7 @@ import { resolve } from 'path';
 import viteChecker from 'vite-plugin-checker';
 import viteCp from 'vite-plugin-cp';
 import viteZipPack from 'unplugin-zip-pack/vite';
-import PluginManifest from './manifest.json';
+import Plugin from './package.json';
 
 const SRC_DIR = resolve(__dirname, './src');
 const OUTPUT_DIR = resolve(__dirname, './dist');
@@ -34,7 +34,7 @@ const ConfigBuilder = (type: 'main' | 'preload') => defineViteConfig({
     outDir: resolve(OUTPUT_DIR, `./${type}`),
     lib: {
       entry: resolve(SRC_DIR, `./${type}/index.ts`),
-      formats: [ 'cjs' ],
+      formats: [ 'es' ],
       fileName: () => 'index.js',
     },
   },
@@ -54,11 +54,11 @@ export default defineConfig({
         },
       }),
       viteCp({
-        targets: [{ src: './manifest.json', dest: 'dist' }],
+        targets: [{ src: './package.json', dest: 'dist' }],
       }),
       viteZipPack({
         in: OUTPUT_DIR,
-        out: resolve(__dirname, `./${PluginManifest.slug}.zip`),
+        out: resolve(__dirname, `./${Plugin.name}.zip`),
       }),
     ],
     build: {

@@ -1,10 +1,12 @@
-import { ipcMain, BrowserWindow } from 'electron';
+import { ipcMain } from 'electron';
 
-ipcMain.on('LLTemplate-Vite.Greeting', (e, name: string) => {
-  console.log('Hello, ' + name + '!');
+ipcMain.on('QwQNTTemplate.greeting', () => {
+  alert('Main');
 });
 
-export const onBrowserWindowCreated = (window: BrowserWindow) => {
+qwqnt.main.hooks.whenBrowserWindowCreated.on(window => {
   console.log('A window has just been created');
   console.log(window);
-};
+
+  return window;
+});
