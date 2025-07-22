@@ -1,4 +1,4 @@
-import { C as CoreExports, F as FrameworkExports } from './exports-BkhRGJT8.js';
+import { C as CoreExports, F as FrameworkExports } from './exports-BGkkLqe5.js';
 
 interface ContextRenderer {
     core: CoreExports;
@@ -6,6 +6,7 @@ interface ContextRenderer {
 }
 declare global {
     const qwqnt: Readonly<ContextRenderer>;
+    function evalModule(script: string): void;
 }
 
 export type { ContextRenderer };

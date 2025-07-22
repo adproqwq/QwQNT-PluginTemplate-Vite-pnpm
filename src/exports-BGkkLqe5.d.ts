@@ -1,12 +1,6 @@
 interface Plugin {
     path: string;
     packageJson: object;
-    isCommonJs: boolean;
-    entry: {
-        main: string | undefined;
-        preload: string | undefined;
-        renderer: string | undefined;
-    };
 }
 
 type TomlValue = string | number | boolean | TomlValue[] | {

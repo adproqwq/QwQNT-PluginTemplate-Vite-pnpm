@@ -1,5 +1,5 @@
-import { BrowserWindow } from 'electron';
-import { C as CoreExports, F as FrameworkExports } from './exports-BkhRGJT8.js';
+import { WebContents, BrowserWindow } from 'electron';
+import { C as CoreExports, F as FrameworkExports } from './exports-BGkkLqe5.js';
 
 type TransformerSignal = typeof HookTransformer.DO_NOTHING | typeof HookTransformer.CONSUMED;
 declare class HookTransformer<T> extends Array<(value: T) => T | TransformerSignal | [TransformerSignal, T]> {
@@ -17,10 +17,16 @@ declare class HookPeeker<T extends unknown[]> extends Array<(...args: T) => bool
 declare module 'electron' {
     interface BrowserWindow {
         readonly webContents: WebContents & {
-            getRouting(): Promise<string | null>;
+            getRouting: typeof getRouting;
+            insertJavaScript: typeof insertJavaScript;
         };
     }
 }
+declare function getRouting(this: WebContents): Promise<string | null>;
+declare function insertJavaScript(this: WebContents, properties: HTMLScriptElement | {
+    src: string;
+    isCommonJs?: boolean;
+}): void;
 declare const hookExports: {
     readonly whenBrowserWindowCreating: HookPeeker<[options: Electron.BrowserWindowConstructorOptions]>;
     readonly whenBrowserWindowCreated: HookTransformer<BrowserWindow>;
