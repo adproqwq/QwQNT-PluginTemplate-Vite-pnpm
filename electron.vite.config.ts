@@ -34,7 +34,7 @@ const ConfigBuilder = (type: 'main' | 'preload') => defineViteConfig({
     outDir: resolve(OUTPUT_DIR, `./${type}`),
     lib: {
       entry: resolve(SRC_DIR, `./${type}/index.ts`),
-      formats: [ 'es' ],
+      formats: [ type === 'preload' ? 'cjs' : 'es' ],
       fileName: () => 'index.js',
     },
   },
