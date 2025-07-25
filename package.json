@@ -33,7 +33,7 @@
   "qwqnt": {
     "name": "QwQNT 插件模板",
     "inject": {
-      "preload": "./preload/index.mjs",
+      "preload": "./preload/index.cjs",
       "renderer": "./renderer/index.js"
     }
   }
