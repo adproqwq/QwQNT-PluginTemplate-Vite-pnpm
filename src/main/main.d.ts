@@ -1,5 +1,5 @@
 import { WebContents, BrowserWindow } from 'electron';
-import { C as CoreExports, F as FrameworkExports } from './exports-BGkkLqe5.js';
+import { C as ContextGlobal } from '../types-context-CFIIPswK.js';
 
 type TransformerSignal = typeof HookTransformer.DO_NOTHING | typeof HookTransformer.CONSUMED;
 declare class HookTransformer<T> extends Array<(value: T) => T | TransformerSignal | [TransformerSignal, T]> {
@@ -33,9 +33,7 @@ declare const hookExports: {
 };
 type HooksElectron = typeof hookExports;
 
-interface ContextMain {
-    core: CoreExports;
-    framework: FrameworkExports;
+interface ContextMain extends ContextGlobal {
     main: {
         hooks: HooksElectron;
     };

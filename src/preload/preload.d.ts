@@ -1,12 +1,9 @@
-import { C as CoreExports, F as FrameworkExports } from './exports-BGkkLqe5.js';
+import { C as ContextGlobal } from '../types-context-CFIIPswK.js';
 
-interface ContextRenderer {
-    core: CoreExports;
-    framework: FrameworkExports;
-}
+type ContextPreload = ContextGlobal;
 declare global {
-    const qwqnt: Readonly<ContextRenderer>;
+    const qwqnt: Readonly<ContextPreload>;
     function evalModule(script: string): void;
 }
 
-export type { ContextRenderer };
+export type { ContextPreload };

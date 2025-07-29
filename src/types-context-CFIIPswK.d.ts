@@ -27,5 +27,9 @@ interface FrameworkExports {
     };
     plugins: Plugin[];
 }
+interface ContextGlobal {
+    core: CoreExports;
+    framework: FrameworkExports;
+}
 
-export type { CoreExports as C, FrameworkExports as F };
+export type { ContextGlobal as C };
