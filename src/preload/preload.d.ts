@@ -1,9 +1,16 @@
-import { C as ContextGlobal } from '../types-context-CFIIPswK.js';
+import { C as ContextGlobal, P as Plugin } from '../types-context-DXNxnjxt.js';
 
-type ContextPreload = ContextGlobal;
+declare function ipcRendererImport(channel: string): any;
+
+interface ContextPreload extends ContextGlobal {
+    preload: {
+        import: typeof ipcRendererImport;
+    };
+}
 declare global {
     const qwqnt: Readonly<ContextPreload>;
-    function evalModule(script: string): void;
+    const __self: Plugin;
+    function evalModule(script: string, self?: unknown): void;
 }
 
 export type { ContextPreload };
