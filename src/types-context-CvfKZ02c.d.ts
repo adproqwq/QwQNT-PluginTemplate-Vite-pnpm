@@ -1,5 +1,7 @@
 declare function storageUrlToPath(url: string): string;
-declare function pathToStorageUrl(path: string, prefix?: string): string;
+declare function pathToStorageUrl(path: string, options?: Record<string, string> & {
+    prefix?: string;
+}): string;
 declare const protocolExports: {
     readonly storageUrlToPath: typeof storageUrlToPath;
     readonly pathToStorageUrl: typeof pathToStorageUrl;
