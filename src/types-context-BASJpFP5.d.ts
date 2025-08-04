@@ -8,10 +8,22 @@ declare const protocolExports: {
 };
 type ElectronProtocol = typeof protocolExports;
 
-interface Plugin {
+interface PluginManifest {
+    inject?: {
+        preload?: string;
+        renderer?: string;
+    };
+    dependencies?: Record<string, string>;
+}
+interface PluginMeta {
     namespace: string;
     path: string;
-    packageJson: object;
+    packageJson: any & {
+        qwqnt?: PluginManifest;
+    };
+}
+interface Plugin {
+    meta: PluginMeta;
 }
 
 type TomlValue = string | number | boolean | TomlValue[] | {

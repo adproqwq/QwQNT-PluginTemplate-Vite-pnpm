@@ -26,7 +26,7 @@
 
 ## 常见问题
 
-1. 本模板使用`pnpm`而非`npm`，如想使用`npm`，请删除`package.json`中的`packageManager`配置项
+1. 本模板使用 `pnpm` 而非 `npm` ，如想使用 `npm` ，请删除 `package.json` 中的 `packageManager` 配置项
 
 ### 部分模块打包后功能不正常或不起作用
 

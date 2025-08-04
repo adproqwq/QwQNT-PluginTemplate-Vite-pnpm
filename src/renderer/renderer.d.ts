@@ -1,4 +1,15 @@
-import { C as ContextGlobal, P as Plugin } from '../types-context-CvfKZ02c.js';
+import { ComponentInternalInstance } from 'vue';
+import { C as ContextGlobal, P as Plugin } from '../types-context-BASJpFP5.js';
+
+declare global {
+    interface HTMLElement {
+        __VUE__?: ComponentInternalInstance[];
+    }
+    interface WindowEventMap {
+        'vue:component-mount': CustomEvent<ComponentInternalInstance>;
+        'vue:component-unmount': CustomEvent<ComponentInternalInstance>;
+    }
+}
 
 type ContextRenderer = ContextGlobal;
 declare global {

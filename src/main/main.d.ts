@@ -1,5 +1,5 @@
 import { WebContents, BrowserWindow } from 'electron';
-import { C as ContextGlobal } from '../types-context-CvfKZ02c.js';
+import { C as ContextGlobal } from '../types-context-BASJpFP5.js';
 
 type TransformerSignal = typeof HookTransformer.DO_NOTHING | typeof HookTransformer.CONSUMED;
 declare class HookTransformer<T> extends Array<(value: T) => T | TransformerSignal | [TransformerSignal, T]> {
