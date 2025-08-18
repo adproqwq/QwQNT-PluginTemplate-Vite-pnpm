@@ -7,7 +7,7 @@
 * 在编写插件时使用 `pnpm` / `yarn` 等包管理器；
 * 被 `Webpack` 的打包速度困扰已久
 * 希望使用 `TypeScript` 编写插件脚本
-* 想使用 `ESLint` 纠正代码错误和统一格式
+* 想使用 `Oxlint` 纠正代码错误和统一格式
 * 执行一行命令即可完成代码检查、代码打包和输出 `zip` 文件
 
 那么这个模板正好适合你！
@@ -17,7 +17,7 @@
 1. 点击本仓库页面右上角的 `Use this template`，然后选择 `Create a new repository`
 2. 在接下来的页面中填写你的仓库信息后，点击 `Create repository`
 3. 将创建的仓库克隆至本地，然后编辑 [`package.json`](package.json)
-4. （可选）编辑 [TypeScript 配置文件](tsconfig.json)、[Vite 配置文件](electron.vite.config.ts) 和 [ESLint 配置文件](eslint.config.ts)，让项目配置风格更符合你的口味
+4. （可选）编辑 [TypeScript 配置文件](tsconfig.json)、[Vite 配置文件](electron.vite.config.ts) 和 [Oxlint 配置文件](.oxlintrc.json)，让项目配置风格更符合你的口味
 5. 运行 `pnpm install` 安装依赖包，你也可以随意安装其他需要的依赖包
 6. 开始编写代码
 7. 执行 `pnpm lint` 检查代码
