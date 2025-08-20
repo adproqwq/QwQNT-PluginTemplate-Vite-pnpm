@@ -10,6 +10,7 @@ type ElectronProtocol = typeof protocolExports;
 
 interface PluginManifest {
     inject?: {
+        main?: string;
         preload?: string;
         renderer?: string;
     };

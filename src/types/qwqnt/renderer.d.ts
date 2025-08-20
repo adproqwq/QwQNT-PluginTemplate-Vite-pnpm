@@ -1,5 +1,5 @@
 import { ComponentInternalInstance } from 'vue';
-import { C as ContextGlobal, P as Plugin } from './types-context-D3vGm2Vy.js';
+import { C as ContextGlobal, P as Plugin } from './types-context-w9J-Pnz5.js';
 
 declare global {
     interface HTMLElement {

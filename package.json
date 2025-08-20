@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "description": "A plugin template for QwQNT, powered by Vite & Typescript",
   "type": "module",
-  "main": "./main/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "oxlint --fix --tsconfig ./tsconfig.json --type-aware src/**/*.js,src/**/*.ts",
@@ -27,6 +26,7 @@
   "qwqnt": {
     "name": "QwQNT 插件模板",
     "inject": {
+      "main": "./main/index.js",
       "preload": "./preload/index.cjs",
       "renderer": "./renderer/index.js"
     }

@@ -16,6 +16,9 @@
               "type": "object",
               "description": "Entry points of the plugin.",
               "properties": {
+                "main": {
+                  "type": "string"
+                },
                 "preload": {
                   "type": "string"
                 },
