@@ -14,13 +14,13 @@
   "devDependencies": {
     "@electron-toolkit/tsconfig": "^1.0.1",
     "@qwqnt/types": "github:QwQ-002/types",
-    "@types/node": "^24.3.0",
-    "electron": "^37.4.0",
+    "@types/node": "^24.3.3",
+    "electron": "^38.1.0",
     "electron-vite": "^4.0.0",
-    "oxlint": "^1.13.0",
+    "oxlint": "^1.15.0",
     "unplugin-oxlint": "^0.7.5",
     "unplugin-zip-pack": "^1.0.3",
-    "vite": "^7.1.3",
+    "vite": "^7.1.5",
     "vite-plugin-cp": "^6.0.3"
   },
   "packageManager": "pnpm@10.15.0",
