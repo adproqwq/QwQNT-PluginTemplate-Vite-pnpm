@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/QwQ-002/types/main/plugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/qwqnt-community/types/main/plugin.schema.json",
   "name": "qwqnttemplate-vite-pnpm",
   "version": "1.0.0",
   "description": "A plugin template for QwQNT, powered by Vite & Typescript",
@@ -12,18 +12,18 @@
   "author": "Adpro",
   "license": "MIT",
   "devDependencies": {
-    "@electron-toolkit/tsconfig": "^1.0.1",
-    "@qwqnt/types": "github:QwQ-002/types",
-    "@types/node": "^24.3.3",
-    "electron": "^38.1.0",
-    "electron-vite": "^4.0.0",
-    "oxlint": "^1.15.0",
+    "@electron-toolkit/tsconfig": "^2.0.0",
+    "@qwqnt/types": "github:qwqnt-community/types",
+    "@types/node": "^24.9.1",
+    "electron": "^38.4.0",
+    "electron-vite": "^4.0.1",
+    "oxlint": "^1.24.0",
     "unplugin-oxlint": "^0.7.5",
     "unplugin-zip-pack": "^1.0.3",
-    "vite": "^7.1.5",
+    "vite": "^7.1.12",
     "vite-plugin-cp": "^6.0.3"
   },
-  "packageManager": "pnpm@10.15.0",
+  "packageManager": "pnpm@10.19.0",
   "qwqnt": {
     "name": "QwQNT 插件模板",
     "inject": {
