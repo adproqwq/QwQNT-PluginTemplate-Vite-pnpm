@@ -14,16 +14,16 @@
   "devDependencies": {
     "@electron-toolkit/tsconfig": "^2.0.0",
     "@qwqnt/types": "github:qwqnt-community/types",
-    "@types/node": "^24.9.1",
-    "electron": "^38.4.0",
+    "@types/node": "^24.9.2",
+    "electron": "^39.0.0",
     "electron-vite": "^4.0.1",
-    "oxlint": "^1.24.0",
+    "oxlint": "^1.25.0",
     "unplugin-oxlint": "^0.7.5",
     "unplugin-zip-pack": "^1.0.3",
     "vite": "^7.1.12",
     "vite-plugin-cp": "^6.0.3"
   },
-  "packageManager": "pnpm@10.19.0",
+  "packageManager": "pnpm@10.20.0",
   "qwqnt": {
     "name": "QwQNT 插件模板",
     "inject": {
