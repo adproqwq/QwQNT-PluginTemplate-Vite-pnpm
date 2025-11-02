@@ -18,6 +18,7 @@
     "electron": "^39.0.0",
     "electron-vite": "^4.0.1",
     "oxlint": "^1.25.0",
+    "oxlint-tsgolint": "^0.4.0",
     "unplugin-oxlint": "^0.7.5",
     "unplugin-zip-pack": "^1.0.3",
     "vite": "^7.1.12",

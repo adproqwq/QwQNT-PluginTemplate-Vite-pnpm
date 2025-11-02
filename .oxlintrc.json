@@ -10,6 +10,7 @@
     "builtin": true
   },
   "rules": {
+    "constructor-super": "error",
     "for-direction": "error",
     "getter-return": "error",
     "no-async-promise-executor": "error",
@@ -40,6 +41,7 @@
     "no-invalid-regexp": "error",
     "no-irregular-whitespace": "error",
     "no-loss-of-precision": "error",
+    "no-misleading-character-class": "error",
     "no-new-native-nonconstructor": "error",
     "no-nonoctal-decimal-escape": "error",
     "no-obj-calls": "error",
@@ -101,6 +103,7 @@
         "**/*.cts"
       ],
       "rules": {
+        "constructor-super": "off",
         "getter-return": "off",
         "no-class-assign": "off",
         "no-const-assign": "off",
