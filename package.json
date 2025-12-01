@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/qwqnt-community/types/main/plugin.schema.json",
-  "name": "qwqnttemplate-vite-pnpm",
+  "name": "qwqnt-template-vite-pnpm",
   "version": "1.0.0",
   "description": "A plugin template for QwQNT, powered by Vite & Typescript",
   "type": "module",
@@ -9,7 +9,7 @@
     "lint": "oxlint --fix --tsconfig ./tsconfig.json --type-aware src/**/*.js,src/**/*.ts",
     "build": "electron-vite build"
   },
-  "author": "Adpro",
+  "author": "風間青祢",
   "license": "MIT",
   "devDependencies": {
     "@electron-toolkit/tsconfig": "^2.0.0",
