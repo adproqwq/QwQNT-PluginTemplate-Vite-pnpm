@@ -17,11 +17,11 @@
     "@types/node": "^24.10.1",
     "electron": "^39.2.4",
     "electron-vite": "^4.0.1",
-    "oxlint": "^1.30.0",
+    "oxlint": "^1.31.0",
     "oxlint-tsgolint": "^0.8.3",
     "unplugin-oxlint": "^0.7.5",
     "unplugin-zip-pack": "^1.0.3",
-    "vite": "^7.2.4",
+    "vite": "^7.2.6",
     "vite-plugin-cp": "^6.0.3"
   },
   "packageManager": "pnpm@10.24.0",
