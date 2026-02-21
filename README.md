@@ -17,7 +17,7 @@
 1. 点击本仓库页面右上角的 `Use this template`，然后选择 `Create a new repository`
 2. 在接下来的页面中填写你的仓库信息后，点击 `Create repository`
 3. 将创建的仓库克隆至本地，然后编辑 [`package.json`](package.json)
-4. （可选）编辑 [TypeScript 配置文件](tsconfig.json)、[Vite 配置文件](electron.vite.config.ts) 和 [Oxlint 配置文件](.oxlintrc.json)，让项目配置风格更符合你的口味
+4. （可选）编辑 [TypeScript 配置文件](tsconfig.json)、[Vite 配置文件](vite.config.ts) 和 [Oxlint 配置文件](.oxlintrc.json)，让项目配置风格更符合你的口味
 5. 运行 `pnpm install` 安装依赖包，你也可以随意安装其他需要的依赖包
 6. 开始编写代码
 7. 执行 `pnpm lint` 检查代码
@@ -34,7 +34,6 @@
 
 ## 鸣谢
 * [Vite](https://vitejs.dev/)
-* [electron-vite](https://electron-vite.org/)
 * [LLOneBot](https://github.com/LLOneBot/LLOneBot)
 * QwQNT
 

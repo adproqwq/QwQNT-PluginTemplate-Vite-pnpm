@@ -7,18 +7,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "oxlint --fix --tsconfig ./tsconfig.json --type-aware src/**/*.js,src/**/*.ts",
-    "build": "electron-vite build"
+    "build": "vite build --mode main && vite build --mode preload && vite build --mode renderer"
   },
   "author": "風間青祢",
   "license": "MIT",
   "devDependencies": {
     "@electron-toolkit/tsconfig": "^2.0.0",
     "@qwqnt/types": "github:qwqnt-community/types",
-    "@types/node": "^25.0.5",
-    "electron": "^39.2.7",
-    "electron-vite": "^5.0.0",
-    "oxlint": "^1.38.0",
-    "oxlint-tsgolint": "^0.11.0",
+    "@types/node": "^25.3.0",
+    "electron": "^40.6.0",
+    "oxlint": "^1.49.0",
+    "oxlint-tsgolint": "^0.14.2",
     "unplugin-oxlint": "^0.7.5",
     "unplugin-zip-pack": "^1.0.3",
     "vite": "^7.3.1",

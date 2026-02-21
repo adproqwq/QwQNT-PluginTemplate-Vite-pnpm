@@ -1,6 +1,6 @@
-import { defineConfig } from 'electron-vite';
-import { defineConfig as defineViteConfig } from 'vite';
-import { resolve } from 'path';
+import { defineConfig } from 'vite';
+import { resolve } from 'node:path';
+import { builtinModules } from 'node:module';
 import viteCp from 'vite-plugin-cp';
 import viteOxlint from 'unplugin-oxlint/vite';
 import viteZipPack from 'unplugin-zip-pack/vite';
@@ -9,7 +9,9 @@ import Plugin from './package.json';
 const SRC_DIR = resolve(__dirname, './src');
 const OUTPUT_DIR = resolve(__dirname, './dist');
 
-const BaseConfig = defineViteConfig({
+const external = ['electron', ...builtinModules.flatMap(m => [m, `node:${m}`])];
+
+const BaseConfig = defineConfig({
   root: __dirname,
   resolve: {
     alias: {
@@ -18,7 +20,7 @@ const BaseConfig = defineViteConfig({
   },
 });
 
-const ConfigBuilder = (type: 'main' | 'preload') => defineViteConfig({
+const configBuilder = (type: 'main' | 'preload') => defineConfig({
   ...BaseConfig,
 
   plugins: [
@@ -35,13 +37,19 @@ const ConfigBuilder = (type: 'main' | 'preload') => defineViteConfig({
       formats: [ type === 'preload' ? 'cjs' : 'es' ],
       fileName: () => 'index.js',
     },
+    rollupOptions: {
+      external,
+    },
+  },
+  esbuild: {
+    platform: type === 'main' ? 'node' : 'browser',
   },
 });
 
-export default defineConfig({
-  main: ConfigBuilder('main'),
-  preload: ConfigBuilder('preload'),
-  renderer: defineViteConfig({
+const configs = {
+  main: configBuilder('main'),
+  preload: configBuilder('preload'),
+  renderer: defineConfig({
     ...BaseConfig,
 
     plugins: [
@@ -58,7 +66,7 @@ export default defineConfig({
       }),
     ],
     build: {
-      minify: 'esbuild',
+      minify: true,
       outDir: resolve(OUTPUT_DIR, './renderer'),
       lib: {
         entry: resolve(SRC_DIR, './renderer/index.ts'),
@@ -67,7 +75,10 @@ export default defineConfig({
       },
       rollupOptions: {
         input: resolve(SRC_DIR, './renderer/index.ts'),
+        external,
       },
     },
   }),
-});
+};
+
+export default defineConfig(({ mode }) => configs[mode as keyof typeof configs]);
