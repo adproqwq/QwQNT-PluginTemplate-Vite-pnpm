@@ -39,7 +39,7 @@ const configs = {
       outDir: resolve(OUTPUT_DIR, './main'),
       lib: {
         entry: resolve(SRC_DIR, './main/index.ts'),
-        formats: [ 'cjs' ],
+        formats: [ 'es' ],
 
         fileName: () => 'index.js',
       },
@@ -68,7 +68,7 @@ const configs = {
         entry: resolve(SRC_DIR, './preload/index.ts'),
         formats: [ 'cjs' ],
 
-        fileName: () => 'index.js',
+        fileName: () => 'index.cjs',
       },
       rollupOptions: {
         external,
@@ -96,7 +96,7 @@ const configs = {
       outDir: resolve(OUTPUT_DIR, './renderer'),
       lib: {
         entry: resolve(SRC_DIR, './renderer/index.ts'),
-        formats: [ 'cjs' ],
+        formats: [ 'es' ],
         fileName: () => 'index.js',
       },
       rollupOptions: {
