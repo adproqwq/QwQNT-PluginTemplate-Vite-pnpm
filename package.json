@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "oxlint --fix --tsconfig ./tsconfig.json --type-aware src/**/*.js,src/**/*.ts",
+    "lint": "oxlint --fix --tsconfig ./tsconfig.json --type-aware",
     "build": "vite build --mode main && vite build --mode preload && vite build --mode renderer"
   },
   "author": "風間青祢",
@@ -14,16 +14,16 @@
   "devDependencies": {
     "@electron-toolkit/tsconfig": "^2.0.0",
     "@qwqnt/types": "github:qwqnt-community/types",
-    "@types/node": "^25.3.5",
-    "electron": "^40.8.0",
-    "oxlint": "^1.51.0",
-    "oxlint-tsgolint": "^0.16.0",
-    "unplugin-oxlint": "^0.7.5",
+    "@types/node": "^25.9.1",
+    "electron": "^42.2.0",
+    "oxlint": "^1.66.0",
+    "oxlint-tsgolint": "^0.23.0",
+    "unplugin-oxlint": "^0.8.0",
     "unplugin-zip-pack": "^1.0.3",
-    "vite": "^7.3.1",
+    "vite": "^8.0.14",
     "vite-plugin-cp": "^6.0.3"
   },
-  "packageManager": "pnpm@10.30.3",
+  "packageManager": "pnpm@11.2.2",
   "qwqnt": {
     "name": "QwQNT 插件模板",
     "inject": {
