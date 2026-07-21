@@ -7,7 +7,7 @@
 * 在编写插件时使用 `pnpm` / `yarn` 等包管理器；
 * 被 `Webpack` 的打包速度困扰已久
 * 希望使用 `TypeScript` 编写插件脚本
-* 想使用 `Oxlint` 纠正代码错误和统一格式
+* 想使用 `Oxlint` 纠正代码错误
 * 执行一行命令即可完成代码检查、代码打包和输出 `zip` 文件
 
 那么这个模板正好适合你！
@@ -30,7 +30,7 @@
 
 ### 部分模块打包后功能不正常或不起作用
 
-请遵循 [Rollup 文档](https://rollupjs.org/configuration-options/#external) 将运行不正常的模块添加至 Vite 的 `rollupOptions` 中，然后利用 `vite-plugin-cp` 插件将对应模块复制到 `dist/node_modules` 目录中。
+请遵循 [Rolldown 文档](http://rolldown.rs/reference/InputOptions.external) 将运行不正常的模块添加至 Vite 的 `rolldownOptions` 中，然后利用 `vite-plugin-cp` 插件将对应模块复制到 `dist/node_modules` 目录中。
 
 ## 鸣谢
 * [Vite](https://vitejs.dev/)
@@ -42,7 +42,7 @@
     MIT License
 
     QwQNT-PluginTemplate-Vite-pnpm
-    Copyright (C) 2025  Adpro
+    Copyright (C) 2026  風間青祢
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
