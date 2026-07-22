@@ -29,12 +29,8 @@ const configs = {
         fix: true,
       }),
     ],
-    ssr: {
-      noExternal: true,
-    },
     build: {
       minify: true,
-      ssr: true,
       outDir: resolve(OUTPUT_DIR, './main'),
       lib: {
         entry: resolve(SRC_DIR, './main/index.ts'),
@@ -94,7 +90,6 @@ const configs = {
         fileName: () => 'index.js',
       },
       rolldownOptions: {
-        input: resolve(SRC_DIR, './renderer/index.ts'),
         external,
       },
     },
