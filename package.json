@@ -5,7 +5,6 @@
   "description": "A plugin template for QwQNT, powered by Vite & Typescript",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "oxlint --fix --tsconfig ./tsconfig.json --type-aware",
     "build": "vite build --mode main && vite build --mode preload && vite build --mode renderer"
   },
@@ -14,16 +13,16 @@
   "devDependencies": {
     "@electron-toolkit/tsconfig": "^2.0.0",
     "@qwqnt/types": "github:qwqnt-community/types",
-    "@types/node": "^26.1.1",
-    "electron": "^43.1.1",
-    "oxlint": "^1.74.0",
-    "oxlint-tsgolint": "^0.25.0",
+    "@types/node": "^26.2.0",
+    "electron": "^43.4.1",
+    "oxlint": "^1.79.0",
+    "oxlint-tsgolint": "^7.0.2001",
     "unplugin-oxlint": "^0.8.2",
     "unplugin-zip-pack": "^1.1.0",
-    "vite": "^8.1.5",
-    "vite-plugin-cp": "^6.0.3"
+    "vite": "^8.2.2",
+    "vite-plugin-cp": "^8.0.1"
   },
-  "packageManager": "pnpm@11.15.1",
+  "packageManager": "pnpm@11.23.0",
   "qwqnt": {
     "name": "QwQNT 插件模板",
     "inject": {
